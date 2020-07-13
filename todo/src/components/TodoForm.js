@@ -1,23 +1,24 @@
-import React, { useState, useReducer } from "react";
-import { initialState, reducer } from "../reducers/simpleReducer";
+import React from "react";
 
-const TodoForm = () => {
-  const [state, dispatch] = useReducer(reducer, initialState);
-  console.log(state);
+const TodoForm = (props) => {
+  const { value, dispatch, setValue, handleChange, handleSubmit } = props;
 
   return (
-  <div className='form-div'>
-      
-      
-      <form>
-          <input/>
-          <button>Add</button>
-          <button>clear</button>
-      </form>
-    
-  
-  </div>
-  )
+    <form onSubmit={handleSubmit}>
+      <span
+        contentEditable="true"
+        id="input"
+        onInput={handleChange}
+        onKeyPress={(e) => {
+          if (e.charCode == 13) {
+            handleSubmit(e);
+          }
+        }}
+        value={value}
+        type="text"
+      />
+    </form>
+  );
 };
 
 export default TodoForm;
