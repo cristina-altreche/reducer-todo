@@ -24,16 +24,19 @@ export const TodoForm = ({ dispatch }) => {
 
   return (
     <div className="form-container">
-      <div className="banner">Today Todo</div>
+      <div className="banner"><h4>Today's Todo</h4></div>
       <form onSubmit={submitForm}>
         <input
           name="todo"
           onChange={handleChanges}
           value={items}
           id={Date.now()}
+          placeholder="Enter Task"
         />
-        <button>Add Item</button>
-        <button onClick={clearCompleted}>Clear Item</button>
+        <div className="buttons">
+        <button>Add</button>
+        <button onClick={clearCompleted}>Clear</button>
+        </div>
       </form>
     </div>
   );
