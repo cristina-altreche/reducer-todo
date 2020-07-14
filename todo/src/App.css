@@ -1,39 +1,37 @@
 .App {
   text-align: center;
-  background: rgb(2,0,36);
-background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
   height: 100vh;
+  margin-top: 200px;
 }
 
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form-container{
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #09d3ac;
+.banner {
+  border: 1.2px solid black;
+  text-align: left;
+  height: 30px;
+  width: 25%;
+  margin: 0 auto;
 }
-
 form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   -ms-align-items: center;
   align-items: center;
-  width: 50%;
-  height: 50vh;
+  width: 25%;
+  
   margin: 0 auto;
+  background-color: black;
   color: white;
+  border: 1.2px solid black;
+  box-shadow: 1px 1px 1px  darkcyan;
+
 }
 
 form button, form label, form input {
@@ -41,7 +39,19 @@ form button, form label, form input {
   width: 75%;
 }
 
+label{
+  text-transform: uppercase;
+  
+  font-weight: 600 ;
+  font-size: 2rem;
+}
+
 h3 {
   margin: 0 auto;
-  color: white;
+  color: black;
+}
+
+input{
+  width: ;
+  border: none;
 }
